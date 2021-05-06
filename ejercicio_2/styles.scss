@@ -1,0 +1,45 @@
+@import 'primary-theme.scss';
+// @import 'secondary-theme.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+
+    .box {
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: $radius;
+        width: 100px;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 25px; 
+        font-family: $secondary-font;
+    }
+
+    .base-box {
+        background-color: $base-color;
+    }
+
+    .important-box {
+        background-color: darken($base-color, 25%);
+    }
+
+    .warning-box {
+        background-color: lighten($base-color, 25%);
+    }
+
+    .principal-font {
+        font-family: $principal-font;
+    }
+
+    .secondary-font {
+        font-family: $secondary-font;
+    }
+
+    .shadow-box {
+        box-shadow: $shadow;
+    }
+
+}
+

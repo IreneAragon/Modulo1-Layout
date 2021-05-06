@@ -1,0 +1,43 @@
+$primary-color: #e95763;
+$complementary-color: complement($primary-color);
+
+.container-1 {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(4,100px) 125px repeat(4,100px);
+    grid-template-rows: 100px;
+    gap: 5px;
+    margin-bottom: 5px;
+    font-family:sans-serif;
+    font-weight: bold;
+
+    .box {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .color-box-text {
+        color: $complementary-color;
+    }
+    .base-color {
+        background-color: $primary-color;
+        & > span {
+            color: white;
+        } 
+    }
+    
+    @for $i from 1 through 4 {
+        .darken-#{$i} {
+            background-color: darken($primary-color, $i * 5%);
+        }
+    
+        .lighten-#{$i} {
+            background-color: lighten($primary-color, $i * 5%);
+        }
+    }
+
+}
+
+
